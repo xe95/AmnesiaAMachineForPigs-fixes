@@ -573,7 +573,8 @@ public:
 	void SetupView()
 	{
 		gpEngine->GetInput()->GetLowLevel()->LockInput(false);
-
+		gpEngine->GetInput()->GetLowLevel()->RelativeMouse(false);
+		
 		cRenderSettings *pSettings = gpSimpleCamera->GetViewport()->GetRenderSettings();
 		gpSimpleCamera->GetViewport()->AddRendererCallback(&renderCallback);
 
